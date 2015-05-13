@@ -111,9 +111,11 @@ ServerAgent::readBack(InReq &req)
             std::cout << "MSG_FWM_RC_REGISTER_ACK" << std::endl;
 
             g_pHeartBeatTimer->attachTimer();
+
         }
         case MSG_FWM_RC_STOP_MODULE_ACK:
         {
+
             FwmRcProto::RequestStartSlave requestStartSlave;
             FwmRcProto::FrameworkInstanceInfo *pFrameworkInstanceInfo = \
                         requestStartSlave.mutable_framework_instance_info();
@@ -301,6 +303,8 @@ ServerAgent::readBack(InReq &req)
             msg.length = str.length();
             
             sendPackage(msg, str.c_str());
+
+            cout << "MSG_FWM_RC_STOP_MODULE" << endl;
             break;
 
         }

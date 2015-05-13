@@ -232,7 +232,7 @@ ServerAgent::readBack(InReq &req)
                 pEachModuleRequestOrReturnResourceInfo->set_resource_request_or_return_to_module_id(moduleIds[i]);
                 FwmRcProto::ResourceInfo *pResourceInfo = \
                             pEachModuleRequestOrReturnResourceInfo->mutable_resource_info();
-                pResourceInfo->set_cpu_num(3);
+                pResourceInfo->set_cpu_num(5);
                 pResourceInfo->set_cpu_mem_size(50);
             }
             string str;
@@ -264,8 +264,8 @@ ServerAgent::readBack(InReq &req)
                 pEachModuleRequestOrReturnResourceInfo->set_resource_request_or_return_to_module_id(moduleIds[i]);
                 FwmRcProto::ResourceInfo *pResourceInfo = \
                             pEachModuleRequestOrReturnResourceInfo->mutable_resource_info();
-                pResourceInfo->set_cpu_num(1);
-                pResourceInfo->set_cpu_mem_size(20);
+                pResourceInfo->set_cpu_num(5);
+                pResourceInfo->set_cpu_mem_size(50);
             }
             string str;
             returnTaskResource.SerializeToString(&str);

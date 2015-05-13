@@ -225,14 +225,14 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /home/cc/RAS_test/trunk1/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/cc/RAS_TEST/trunk/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /home/cc/RAS_test/trunk1/missing autoconf
-AUTOHEADER = ${SHELL} /home/cc/RAS_test/trunk1/missing autoheader
-AUTOMAKE = ${SHELL} /home/cc/RAS_test/trunk1/missing automake-1.14
-AWK = mawk
+AUTOCONF = ${SHELL} /home/cc/RAS_TEST/trunk/missing autoconf
+AUTOHEADER = ${SHELL} /home/cc/RAS_TEST/trunk/missing autoheader
+AUTOMAKE = ${SHELL} /home/cc/RAS_TEST/trunk/missing automake-1.14
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -268,7 +268,7 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/cc/RAS_test/trunk1/missing makeinfo
+MAKEINFO = ${SHELL} /home/cc/RAS_TEST/trunk/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -291,10 +291,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = strip
 VERSION = 1.0
-abs_builddir = /home/cc/RAS_test/trunk1/build/src/protocol
-abs_srcdir = /home/cc/RAS_test/trunk1/build/../src/protocol
-abs_top_builddir = /home/cc/RAS_test/trunk1/build
-abs_top_srcdir = /home/cc/RAS_test/trunk1/build/..
+abs_builddir = /home/cc/RAS_TEST/trunk/build/src/protocol
+abs_srcdir = /home/cc/RAS_TEST/trunk/build/../src/protocol
+abs_top_builddir = /home/cc/RAS_TEST/trunk/build
+abs_top_srcdir = /home/cc/RAS_TEST/trunk/build/..
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -324,7 +324,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/cc/RAS_test/trunk1/install-sh
+install_sh = ${SHELL} /home/cc/RAS_TEST/trunk/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -379,9 +379,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign src/protocol/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu src/protocol/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign src/protocol/Makefile
+	  $(AUTOMAKE) --gnu src/protocol/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \

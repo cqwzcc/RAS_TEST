@@ -339,9 +339,9 @@ $(srcdir)/Makefile.in:  $(srcdir)/Makefile.am  $(am__configure_deps)
 	      exit 1;; \
 	  esac; \
 	done; \
-	echo ' cd $(top_srcdir) && $(AUTOMAKE) --foreign src/common/Timer/Makefile'; \
+	echo ' cd $(top_srcdir) && $(AUTOMAKE) --gnu src/common/Timer/Makefile'; \
 	$(am__cd) $(top_srcdir) && \
-	  $(AUTOMAKE) --foreign src/common/Timer/Makefile
+	  $(AUTOMAKE) --gnu src/common/Timer/Makefile
 .PRECIOUS: Makefile
 Makefile: $(srcdir)/Makefile.in $(top_builddir)/config.status
 	@case '$?' in \
