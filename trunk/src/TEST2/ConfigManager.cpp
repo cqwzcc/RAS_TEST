@@ -76,7 +76,7 @@ int ConfigManager::configWithXML(const char *configFileName)
         delete pXML;
         return ret;
     }
-
+/*
     ret = pXML->getFirstNodeValue("/CONFIG/RAS_CONFIG/FWM_IP", m_FwmIp);
     if ( ret < 0 ){
         delete pXML;
@@ -89,7 +89,7 @@ int ConfigManager::configWithXML(const char *configFileName)
         return ret;
     }
     m_FwmPort = conv<uint32_t, string>(strFwmPort);
-
+*/
     string strData;
     ret = pXML->getFirstNodeValue("/CONFIG/RAS_CONFIG/LISTEN_PORT", strData);
     if ( ret < 0 ){

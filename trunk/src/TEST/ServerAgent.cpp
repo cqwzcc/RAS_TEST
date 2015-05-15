@@ -23,6 +23,7 @@
 #include "protocol/FwmRcProtocol.pb.h"
 #include "HeartBeatTimer.h"
 #include "header.h"
+#include "unistd.h"
 
 #include "common/comm/Epoll.h"
 #include "common/comm/SocketAddress.h"
@@ -151,6 +152,7 @@ ServerAgent::readBack(InReq &req)
             sendPackage(msg, str.c_str());
             
             std::cout << "MSG_FWM_RC_REQUEST_START_SLAVE" << std::endl;
+            sleep(4);
             break;
         }
         case MSG_FWM_RC_SEND_HEARTBEAT_ACK:

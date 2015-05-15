@@ -104,12 +104,13 @@ int main(int argc, char *argv[])
         return FAILED;
     }
     
+    sleep(10);
     servaddr.setAddress(
             (ConfigManager::getInstance())->getRcIp().c_str(),
             (ConfigManager::getInstance())->getRcPort());
     g_pServerAgent = (AgentManager::getInstance())->createAgent<ServerAgent>(servaddr);
     g_pServerAgent->init();
-
+/*
     const vector<uint32_t>& vec = ConfigManager::getInstance()->getListenPort();
     SocketAddress listenAddress((ConfigManager::getInstance()->getSelfIp()).c_str(), vec[0]);
     
@@ -117,7 +118,7 @@ int main(int argc, char *argv[])
             (AgentManager::getInstance())->
             createAgent< TCPListenAgent<ClientAgent> >(listenAddress);
     pClientLisAgent->init();
-
+*/
     if ( signal(SIGINT, doExit) == SIG_ERR )
     {
         ERROR_LOG("\nIn main: set SIGINT(catch \"ctrl+c\") signal error!\n");
